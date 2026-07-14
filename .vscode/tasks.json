@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "//": "Taches un-clic. Menu VSCode : Terminal > Executer la tache... (ou Ctrl+Maj+P > Run Task).",
+  "tasks": [
+    {
+      "label": "1 - Installer les dependances (tout)",
+      "detail": "npm install a la racine + dans Launcher (a faire une seule fois).",
+      "type": "shell",
+      "command": "npm install && npm --prefix Launcher install",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "2 - Demarrer le launcher (dev)",
+      "detail": "Lance le launcher en mode developpement avec rechargement a chaud.",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/Launcher" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "3 - Demarrer le site vitrine (dev)",
+      "detail": "Lance le site Website/ en local.",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/Website" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "4 - Compiler le launcher (build)",
+      "detail": "Compile main + preload + renderer dans Launcher/out.",
+      "type": "shell",
+      "command": "npm run build",
+      "options": { "cwd": "${workspaceFolder}/Launcher" },
+      "problemMatcher": []
+    },
+    {
+      "label": "5 - Generer l'installateur Windows",
+      "detail": "Cree l'exe/installateur dans Launcher/release (electron-builder).",
+      "type": "shell",
+      "command": "npm run dist:win",
+      "options": { "cwd": "${workspaceFolder}/Launcher" },
+      "problemMatcher": []
+    },
+    {
+      "label": "6 - Test smoke",
+      "detail": "Verifie que le build se charge correctement.",
+      "type": "shell",
+      "command": "npm run test:smoke",
+      "options": { "cwd": "${workspaceFolder}/Launcher" },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "//": "Reglages d'espace de travail Stellar Studio. Non intrusifs (pas de reformatage force).",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "typescript.tsdk": "Launcher/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/out": true,
+    "**/release": true,
+    "**/dist": true,
+    "**/.npm-cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/out": true,
+    "**/release": true,
+    "**/dist": true
+  }
+}

@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin/
+# Wiki BMC : brouillon — retirer cette ligne quand la page sera publique.
+Disallow: /betterminecraft/wiki/
+
+Sitemap: https://stellarstudio.com/sitemap.xml

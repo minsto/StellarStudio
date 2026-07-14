@@ -1,0 +1,47 @@
+node_modules/
+.npm-cache/
+out/
+dist/
+build/
+release/
+*.log
+.DS_Store
+
+# Secrets / configuration locale (ne JAMAIS versionner — .env.example reste suivi)
+.env
+.env.local
+.env.*.local
+test/electron-user-data/
+Launcher/test/electron-user-data/
+
+# Artefacts locaux (jamais sur GitHub — ne pas proposer au commit)
+Launcher/Contents*.dir
+Launcher/MainQueueOnline*.que
+Launcher/UnattendGC/
+Launcher/Rank System Assets/
+Launcher/cbs.log*
+
+# Copies de sauvegarde « *_1.* » à côté des vrais sources — ne pas versionner
+*_1.ts
+*_1.tsx
+*_1.css
+*_1.js
+*_1.mjs
+*_1.html
+*_1.md
+*_1.json
+*_1.txt
+*_1.example
+*_1.d.ts
+*_1.inc
+*_1.reg
+package-lock_1.json
+*_1.xml
+
+# Diagnostics / résidus d’install locale (hors dépôt)
+Launcher/diag*.xml
+Launcher/ranked/
+Launcher/setupinfo
+
+# Icônes .ico sous src/ (non présentes sur origin — bruit courant)
+src/renderer/src/assets/*.ico

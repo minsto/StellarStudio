@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "//": "Appuie sur F5 pour demarrer le launcher en dev. (Installe d'abord les dependances : tache 1.)",
+  "configurations": [
+    {
+      "name": "Lancer le launcher (dev)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/Launcher",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Lancer le site vitrine (dev)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/Website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
